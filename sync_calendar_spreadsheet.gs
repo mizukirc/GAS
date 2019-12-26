@@ -23,7 +23,7 @@ function addEventsToCalendar(){
       var endTemp = new Date(eventdate);
       var end = new Date(endTemp.getTime() + MILLIS_PER_DAY);
 
-      Cal = CalendarApp.getCalendarById("kansaiacnrun@gmail.com");
+      Cal = CalendarApp.getCalendarById("%calname%@gmail.com");
       Cal.createAllDayEvent(eventname+'('+runner+')', start, end, {location:place,description:distance+'\n'+url});
       
       sht.getRange(i,10).setValue("登録完了");
